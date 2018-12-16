@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Train Scheduler</title>
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- FIREBASE -->
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+
+  <!-- MOMENT.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <!-- JQUERY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  
+  <style>
+    /* Create Table with column headers */
+    #trainScheduleTable th,
+    td {
+      width: 20%;
+    }
+  </style>
+</head>
+
+<body>
+    
+
+  <!-- Employee Tracker -->
+  <div class="container">
+
+    <!-- Jumbotron -->
+    <div class="jumbotron" style="background-color: rgb(2, 86, 96); color: rgb(250, 219, 42);font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;border-style: groove; border-color:darkkhaki ; border-width:4px; ">
+      <h1 class="text-center"><span style ="font-family:fantasy">Any Time Is Train Time</span> </h1>
+      <h3 class="text-center"><span style ="color:darkturquoise"> Choo </span><span style ="color:rgb(226, 92, 9)"> Choo </span><span style ="color:darkturquoise"> Chee </span><span style ="color:rgb(226, 92, 9)"> Chee </span></h3>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <!-- Train Schedule-->
+        <div class="card mb-4">
+          <div class="card-header">Current Trains</div>
+          <div class="card-body">
+            <table class="table table-sm table-hover" id='train-table'>
+              <thead>
+                <tr>
+                  <th scope="col">Train Name</th>
+                  <th scope="col">Destination</th>
+                  <th scope="col">Frequency(mins)</th>
+                  <th scope="col">Next Arrival</th>
+                  <th scope="col">Arrival Time</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Add Train  -->
+        <div class="card mb-4">
+          <div class="card-header">Add Train</div>
+          <div class="card-body">
+
+            <!-- Entry Form -->
+            <form>
+              <div class="form-group">
+                <label for="train-Name-Input">Train Name</label>
+                <input class="form-control" id="trainNameInput" placeholder="Panda Express" type="text">
+              </div>
+              <div class="form-group">
+                <label for="destination">Destination</label>
+                <input class="form-control" id="destination" placeholder="Narnia" type="text">
+              </div>
+              <div class="form-group">
+                <label for="firstTrainTime">First Train Departure (HH:mm - military time)</label>
+                <input class="form-control" id="firstTrainTime" placeholder="00:00" type="text">
+              </div>
+              <div class="form-group">
+                <label for="frequency">Frequency (Mins)</label>
+                <input class="form-control" id="frequency" placeholder="10000" type="text">
+              </div>
+              <button class="btn btn-primary float-right" id="newTrainAdd">Submit</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="javascript/trainLogic.js"></script>
+
+</body>
+
+</html>

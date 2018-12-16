@@ -1,0 +1,29 @@
+table{
+    width: 100%;
+    text-align:center;
+}
+th,h2{
+    width: 100%;
+    text-align:center;
+}
+.trainName{
+    width: 30%;
+    text-align:left;
+}
+
+.destination{
+    width: 30%;
+    text-align:left;
+}
+.frequency{
+    width: 15%;
+    text-align:left;
+}
+.nextArrival{
+    width: 15%;
+    text-align:left;
+}
+.minutesAway{
+    width: 10%;
+    text-align:left;
+}
